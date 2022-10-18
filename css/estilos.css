@@ -1,0 +1,581 @@
+/* GOOGLE FONTS  */
+
+/* font-family: 'Aboreto', cursive;
+font-family: 'Pacifico', cursive;
+font-family: 'Roboto', sans-serif;
+
+ */
+/* varaibles */
+
+:root {
+    /* globales */
+
+
+    /* root: tiene mayor especificidad que html, pero en escencia son lo mismo */
+    /* COLORES (a definir, para maquetado uso escala de azules) */
+    --background-color: rgb(156, 155, 252);
+    --sections-color: rgb(36, 32, 255);
+    --text-color: rgb(0, 0, 0);
+    --text-color-ligth: rgb(221, 220, 255);
+    --article-color: #aef6ff;
+    --btn-color: #2f009c;
+    --btn-color-hoover: #7d009c;
+    --menu-color: black;
+    --menu-color-hover: white;
+    --bg-color-menu-hover: gray;
+    --bg-color-menu: black;
+}
+
+
+html {
+
+    /* USAMOS MULTIPLOS DE 8 ( PARA HACER PIXEL PERFECT EN ANDROID )  */
+    font-size: 8px;
+    font-family: 'Roboto', sans-serif;
+    color: var(--text-color);
+    height: 100vh;
+    width: 100vw;
+}
+
+/* TODO ESTE SELECTOR "*" SE MODIFICA EN NORMALIZE.CSS  */
+/* * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+} */
+
+a {
+    color: beige;
+}
+
+.contenedor {
+    background-color: var(--background-color);
+    min-width: 600px;
+    max-width: 2400px;
+    margin: 16px auto;
+    display: grid;
+
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(9, auto);
+    gap: 24px 24px;
+    /* Multiplos de 8 para hacer pixel perfect en android  */
+    /* 
+    Para acomodar los elementos desde el contenedor padre en grid place-content	[align-content] [justify-content] 
+ */
+    place-content: stretch stretch;
+    place-items:  stretch stretch;
+
+
+
+    LAS TEMPLATE-AREAS ESTAN AL FINAL EN MEDIA-QUERIES
+    /*     grid-template-areas: 
+        "header header header header header"
+        "navbar navbar navbar navbar navbar"
+        "contenido contenido contenido contenido sidebar"
+        "contenido contenido contenido contenido sidebar"
+        "contenido contenido contenido contenido sidebar"
+        "contenido contenido contenido contenido sidebar"
+        "contenido contenido contenido contenido sidebar"
+        "contenido contenido contenido contenido sidebar"
+        "footer footer footer footer footer";
+ */
+}
+
+
+
+
+.contenedor .header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    justify-items: center;
+    grid-area: header;
+
+
+
+}
+
+
+.contenedor .navbar {
+
+
+
+    font-size: 2em;
+
+    background-color: var(--sections-color);
+    color: var(--text-color-ligth);
+    border: 2px;
+    border-radius: 8px;
+    height: auto;
+    width: 98%;
+    padding: 4px;
+    justify-self: center;
+
+
+    
+    display: flex;
+    /* place-content: space-between; */
+    flex-flow: row nowrap;
+    align-items: stretch;
+    justify-content: space-evenly;
+    /* flex: 1 0 auto; */
+
+    /* porque no anda?? claro, UL es un único elemnto para el flex...asi que tecnicamente anda pero no como esperaba jaja  */
+
+    grid-area: navbar;
+}
+
+.contenedor .navbar .navbarList{
+
+    
+    list-style: none;
+    position: relative;
+
+    display: grid;
+    /* Acomodo automaticamente todo en columnas  */
+    grid-auto-flow: column; 
+    grid-auto-columns: minmax(max-content, 1fr);
+    /* margin-left: 2em; */
+    gap: 2em;
+
+    align-items: center;
+    justify-items: center;
+    justify-content: stretch;
+    align-content:stretch;
+
+  
+    
+    
+    
+
+}
+
+
+
+
+
+
+
+
+.contenedor .navbar .btn_1
+ {
+    background-color: var(--btn-color);
+    border: none;
+    color: white;
+    border-radius: 24px;
+    padding: 0px 8px;
+    text-align: center;
+
+
+    text-decoration: none;
+    /* display: inline-block; */
+    font-size: 1em;
+    /* min-width: 64px ; */
+
+    flex: 0.01 0 120px;
+    height: fit-content;
+    min-height: 32px;
+
+}
+
+
+/*Esto lo agregué*/
+
+/* .contenedor .navbar li {
+    display: inline-block;
+    position: relative;
+} */
+
+.contenedor .navbar li a {
+    text-decoration: none;
+    font-size: 10px;
+    color: black;
+    transition: 0.8s;
+    padding: 5px;
+}
+
+.contenedor .navbar li a:hover {
+    color: var(--btn-color-hoover);
+    background-color: #aef6ff;
+}
+
+/*Hasta acá*/
+
+
+.contenedor .contenido {
+
+    display: flex;
+    /*     flex-direction: column;
+    flex-wrap: nowrap; */
+    flex-flow: column nowrap;
+    justify-content: space-evenly;
+    align-items: stretch;
+    /* los articulso deberian ocupar todo el ancho disponible */
+    margin: 24px 24px;
+
+    gap: 24px 24px;
+
+    grid-area: contenido;
+}
+
+.contenedor .contenido .articulo {
+     /* background-color: var(--article-color); */
+
+     border: 2px;
+     border-style: dashed;
+     border-radius: 32px;
+ 
+     border-color: rgb(0, 0, 0);
+     z-index: 1;
+ 
+ 
+     
+ 
+     /* min-height: 200px; */
+     align-items: stretch;
+ 
+     /* min-width: 480px; */
+     /* max-width: 640px; */
+     margin: 12px 24px;
+ 
+     /* flex basis actua sobre el height porque estamos en flex-direction: column; */
+     flex: 0 0 240px;
+ 
+     display: grid;
+ 
+     grid-template-columns: minmax(280px, 1fr) 2fr;
+     /* grid-auto-rows: min-content; */
+
+}
+
+
+.contenedor .contenido .articulo .titular{
+
+
+    /* background-color: var(--titular-bg-color); */
+
+    margin: 24px auto;
+
+    text-align: left;
+
+    font-size: 2rem;
+    color: var(--titular-color);
+
+    display: flex;
+
+    flex-flow: column nowrap;
+    justify-items: center;
+    align-items: center;
+   
+
+
+    /* grid-area: titular; */
+}
+.contenedor .contenido .articulo .titular .seguirLeyendo{
+
+    display: inline-block;
+    justify-self: end;
+    align-self: center;
+    background-color: blue;
+    color: aliceblue;
+    text-decoration: none;
+    /* margin: 0 auto; */
+
+    padding: 10px 20px;
+    border-radius: 32px;
+
+
+}
+
+
+.contenedor .contenido .articulo .portada{
+
+    /* background-color: #dcffd3; */
+
+    display: flex;
+    align-items: center;
+    margin: 8px 8px;
+    /* margin: 32px; */
+    /* padding: 8px; */
+    
+    
+    
+
+    
+
+
+    /* grid-area: portada; */
+
+    
+}
+
+.contenedor .contenido .articulo .portada .portadaImagen {
+
+    /* display: flex; */
+
+    aspect-ratio: 1/1;
+
+    /* height: 200px; */
+    /* width: 200px; */
+    object-fit:cover;
+
+
+    max-width: 260px;
+    max-height: 260px;
+    border-radius: 32px;
+    
+   
+
+    z-index: 0;
+}
+
+
+
+
+.contenedor .sidebar {
+
+    background-color: var(--sections-color);
+    border: 2px;
+    border-radius: 8px;
+
+    min-width: 80px;
+    /* min-height: 80vh; */
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-start;
+
+
+    grid-area: sidebar;
+
+}
+
+
+.contenedor .footer {
+
+    background-color: var(--sections-color);
+    border: 2px;
+    border-radius: 8px;
+    border-color: black;
+    min-height: 100px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    grid-area: footer;
+}
+
+
+/* 
+*********************************************************************************************************
+*******************PARA BARRA DE NAVEGACIÓN CON MENÚ HAMBURGUESA************************************¨
+******************************************************************************************
+*/
+
+/* .header .contenedor .navbar {
+    place-content: flex-start;
+} */
+
+#menu,
+#menu-check {
+    display: none;
+}
+
+
+
+/* 
+*********************************************************************************************************
+*******************HEY! POR ACÁ ESTAN LOS MEDIA QUERY************************************¨
+******************************************************************************************
+*/
+
+/* SMALL ANDROID */
+@media screen and (max-width: 640px) {
+
+    .contenedor {
+
+        grid-template-areas:
+            "header header header header header"
+            "navbar navbar navbar navbar navbar"
+            "sidebar sidebar sidebar sidebar sidebar"
+            "contenido contenido contenido contenido contenido"
+            "contenido contenido contenido contenido contenido"
+            "contenido contenido contenido contenido contenido"
+            "contenido contenido contenido contenido contenido"
+            "contenido contenido contenido contenido contenido"
+            "footer footer footer footer footer";
+
+    }
+
+    /* 
+*********************************************************************************************************
+*******************PARA BARRA DE NAVEGACIÓN CON MENÚ HAMBURGUESA************************************¨
+******************************************************************************************
+*/
+
+    #menu-check:not(:checked)~nav {
+        display: none;
+    }
+
+    #menu-check:checked~nav {
+        display: block;
+    }
+
+
+    #menu {
+        display: block;
+        color: var(--menu-color);
+        font-size: 1em;
+        font-weight: bold;
+        border: 3px solid var(--menu-color);
+        border-radius: 0.3em;
+        position: absolute;
+        right: flex;
+        top: 3.5em;
+
+        /*z-index: 9999;*/
+    }
+
+    #menu:hover {
+        color: var(--menu-color-hover);
+        background-color: var(--bg-color-menu-hover);
+    }
+
+    #menu-cerrar {
+        display: none;
+    }
+
+    #menu-check:checked~label #menu-abrir {
+        display: none;
+    }
+
+    #menu-check:checked~label #menu-cerrar {
+        display: block;
+    }
+
+
+    .contenedor .navbar ul, .contenedor .navbar li  {
+        display: block;
+        text-align: center;
+        height: 15px;
+        font-size: 80%;
+        padding: 18px;
+        /*margin: 40px;*/
+    }
+
+    .contenedor .navbar .navbarList{
+
+    
+        list-style: none;
+        position: relative;
+    
+        display: grid;
+        /* Acomodo automaticamente todo en columnas  */
+        grid-auto-flow: row; 
+        grid-auto-rows: minmax(max-content, 1fr);
+        /* margin-left: 2em; */
+        gap: 0.1em;
+    
+        align-items: center;
+        justify-items: center;
+        justify-content: stretch;
+        align-content:stretch;
+
+    }
+
+
+}
+
+
+
+
+
+
+
+
+/* HD desktop  */
+@media screen and (min-width: 640px) and (max-width: 1280px) {
+
+    .contenedor {
+
+        grid-template-areas:
+            "header header header header header"
+            "navbar navbar navbar navbar navbar"
+            "contenido contenido contenido contenido sidebar"
+            "contenido contenido contenido contenido sidebar"
+            "contenido contenido contenido contenido sidebar"
+            "contenido contenido contenido contenido sidebar"
+            "contenido contenido contenido contenido sidebar"
+            "contenido contenido contenido contenido sidebar"
+            "footer footer footer footer footer";
+
+
+    }
+
+    /* Esto lo agregué*/
+
+    html {
+
+        font-size: 40%;
+        font-family: 'Roboto', sans-serif;
+        color: var(--text-color);
+        height: 100vh;
+        width: 100vw;
+    }
+
+}
+
+/* Full HD */
+
+@media screen and (min-width: 1280px) {
+
+    .contenedor {
+
+        grid-template-areas:
+            "header header header header header"
+            "navbar navbar navbar navbar navbar"
+            "contenido contenido contenido contenido sidebar"
+            "contenido contenido contenido contenido sidebar"
+            "contenido contenido contenido contenido sidebar"
+            "contenido contenido contenido contenido sidebar"
+            "contenido contenido contenido contenido sidebar"
+            "contenido contenido contenido contenido sidebar"
+            "footer footer footer footer footer";
+
+    }
+
+    .contenedor .contenido {
+        background-color: var(--sections-color);
+
+        /* max-width: 2400px; */
+        display: flex;
+        /*     flex-direction: column;
+        flex-wrap: nowrap; */
+        flex-flow: row wrap;
+
+        justify-content: space-evenly;
+        align-content: stretch;
+
+        gap: 16px 16px;
+
+
+        grid-area: contenido;
+    }
+
+    .contenedor .contenido .articulo {
+
+        min-height: 240px;
+
+        /* flex-basis: actua sobre el width porque estamos en row; */
+        /* flex-basis: 640px;
+
+        flex-grow: 1; */
+
+        flex: 1 0 600px;
+
+
+    }
+
+}
