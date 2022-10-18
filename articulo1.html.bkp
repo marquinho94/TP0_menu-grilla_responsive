@@ -77,31 +77,25 @@
                
                 <div class="titular">
                     
-                    <h1>Una videollamada con extraños puede exponer tus datos</h1>
-                    <h3>Una videollamada a traves de la plataforma Omegle podria reverlar datos personales sensibles.</h3>
+                    <H1>Mirá mamá, sin manos!!!</H1>
+                    <h3>Nuevos telefonos que levitan Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus, autem iure. Ducimus soluta quas quam quis? Tempora maxime accusantium animi voluptatum, iste labore unde necessitatibus ipsum corrupti omnis sapiente modi.</h3>
 
 
                 </div>
 
-                <div class="noticiaFotoContenedor"><img class="noticiaFoto" src="img/art-01.png" alt="portada de noticia" ></div>
+                <div class="noticiaFotoContenedor"><img class="noticiaFoto" src="img/portada-articulo-1.jpg" alt="portada de noticia" ></div>
 
                 <div class="noticiaCuerpo">
-                    <h1>Una videollamada con extraños puede exponer tus datos</h1>
-                    <h3>Una videollamada a traves de la plataforma Omegle podria reverlar datos personales sensibles.</h3>
-                    <p>Desde hace un tiempo es común ver vídeos en redes sociales en los que una persona realiza una videollamada con extraños en la plataforma Omegle y ésta empieza a obtener información de dónde vive, cómo se llama, etc. dejando sorprendido al otro participante.
-
-                        En el siguiente vídeo podemos encontrar cómo el youtuber Charles Clayton obtiene mediante una pequeña automatización la geolocalización de las direcciones IP de aquellos emparejados con él en las videollamadas de Omegle.
-                        
-                        Hay multitud de clips y recopilaciones en las plataformas YouTube y TikTok, aunque algunas son sospechosamente falsas; la pregunta que nos hacemos es: ¿cómo lo hacen?
-                        
-                        Las personas que sufren esta revelación de datos personales se preguntan si han sido hackeados, la respuesta a esto sería que no, al menos en principio, simplemente han compartido su IP pública a través del servicio de Omegle y el resto se basa en utilizar diferentes herramientas para recolectar la mayor información posible.</p>
+                    <H1>Mirá mamá, sin manos!!!</H1>
+                    <h3>Nuevos telefonos que levitan Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus, autem iure. Ducimus soluta quas quam quis? Tempora maxime accusantium animi voluptatum, iste labore unde necessitatibus ipsum corrupti omnis sapiente modi.</h3>
+                    <p>Cuerpo de la noticia</p>
                     <hr>
-                    <p>Más cosas sobre la noticia mágica <strong>hola, soy un strong</strong> </p>
+                    <P>Más cosas sobre la noticia mágica <strong>hola, soy un strong</strong> </P>
                     
 
                 </div>
                 <div class="noticiaVolverContenedor">
-                    <a class="noticiaFuente" href="https://unaaldia.hispasec.com/2022/10/una-videollamada-con-extranos-puede-exponer-tus-datos.html" target="_blank">Link a la fuente</a>
+                    <a class="noticiaFuente" href="#">Link a la fuente</a>
                     <a class="noticiaFuente" href="index.html">Link a la página principal</a>
                 </div>
 

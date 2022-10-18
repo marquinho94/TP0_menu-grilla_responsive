@@ -68,8 +68,8 @@ a {
 
 
 
-    LAS TEMPLATE-AREAS ESTAN AL FINAL EN MEDIA-QUERIES
-    /*     grid-template-areas: 
+    /*LAS TEMPLATE-AREAS ESTAN AL FINAL EN MEDIA-QUERIES
+         grid-template-areas: 
         "header header header header header"
         "navbar navbar navbar navbar navbar"
         "contenido contenido contenido contenido sidebar"
@@ -79,7 +79,7 @@ a {
         "contenido contenido contenido contenido sidebar"
         "contenido contenido contenido contenido sidebar"
         "footer footer footer footer footer";
- */
+    */
 }
 
 
