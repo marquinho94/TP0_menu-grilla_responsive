@@ -330,6 +330,67 @@ a {
     z-index: 0;
 }
 
+/********************************************************************************************
+****************ESTILOS DE LA NOTICIA HTML APARTE ***********************************************
+************************************************************************/
+
+.contenedor .contenido .noticia {
+    /* background-color: var(--article-color); */
+
+    border: 2px;
+    border-style: dashed;
+    border-radius: 32px;
+
+    border-color: rgb(0, 0, 0);
+    z-index: 1;
+    
+
+    margin: 12px 24px;
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: stretch;
+    justify-content: flex-start;
+    /* justify funciona en el eje principal, en este caso vertical  */
+
+}
+
+
+.contenedor .contenido .noticia .titular{
+
+
+   /* background-color: var(--titular-bg-color); */
+
+   margin: 24px auto;
+
+   text-align: left;
+
+   font-size: 2rem;
+   color: var(--titular-color);
+
+}
+
+
+.contenedor .contenido .noticia .noticiaFotoContenedor{
+
+   /* background-color: #dcffd3; */
+   align-self: center;
+   display: block;
+   align-items: center;
+   justify-self: stretch;
+   overflow: hidden;
+   margin: 8px 8px;
+   /* margin: 32px; */
+   /* padding: 8px; */
+}
+
+.contenedor .contenido .noticia .noticiaFotoContenedor .noticiaFoto {
+   aspect-ratio: 1/1;
+   object-fit:cover;
+   max-width: 800px;
+   max-height: 800px;
+   border-radius: 32px;
+}
+
 
 
 
