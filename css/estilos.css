@@ -391,8 +391,38 @@ a {
    border-radius: 32px;
 }
 
+.contenedor .contenido .noticia .noticiaCuerpo{
+
+    margin: 24px auto;
+
+    text-align: left;
+ 
+    font-size: 2rem;
+    color: var(--titular-color);
+
+}
+.contenedor .contenido .noticia .noticiaVolverContenedor{
+
+    display: flex;
+    gap: 4em;
+    margin: 24px auto;
+    font-size: 1.5em;
+    text-align: center;
+
+}
+
+.contenedor .contenido .noticia .noticiaVolverContenedor .noticiaFuente{
+
+    cursor: pointer;
+
+}
 
 
+
+
+
+
+/*******************************************/
 
 .contenedor .sidebar {
 
