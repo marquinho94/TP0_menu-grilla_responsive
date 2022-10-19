@@ -25,7 +25,7 @@
 
 <body>
     <div class="contenedor">
-        <header class="header">
+        <header class="header encabezado">
             <!-- <h1>logo?</h1> -->
             <br>
             <h1>ENCABEZADO</h1>
@@ -73,42 +73,79 @@
 
         <main class="contenido">
 
-            <div class="noticia">
-               
-                <div class="titular">
-                    
-                    <h1>Una videollamada con extraños puede exponer tus datos</h1>
-                    <h3>Una videollamada a traves de la plataforma Omegle podria reverlar datos personales sensibles.</h3>
+            <div class="contacto">
+                <h2>CONTÁCTANOS</h2>
+                <p>Nos comunicaremos lo antes posible</p>
+            </div>
+            <div class="imagenFormulario">
+                <img src="img/Computación-1.jpg" alt="Mundo_Conectado">
+            </div>
+            <div class="table contacto">
+                        <form action="https://formspree.io/f/xpznldek" method="POST">
+                            <label>
+                                <legend>Nombre:</legend>
+                                <br>
+                                <input type="name" name="nombre">
+                            </label>
+
+                            <br>
+                            <br>
+
+                            <label>
+                                <legend>Apellido:</legend>
+                                <br>
+                                <input type="apellido" name="apellido">
+                            </label>
+                            
+                            <br>
+                            <br>
+
+                            <label>
+                                <legend>Mail:</legend>
+                                <br>
+                                <input type="email" name="email">
+                            </label>
+
+                            <br>
+                            <br>
+
+                            <label>
+                                <legend>Mensaje:</legend>
+                                <br>
+                                <textarea name="message"></textarea>
+                            </label>
+
+                            <br>
+                            <br>
+
+                            <button class="boton" type="submit">Enviar</button>
+                            <button class="boton" type="reset">Borrar datos</button>
 
 
-                </div>
+                            <br>
 
-                <div class="noticiaFotoContenedor"><img class="noticiaFoto" src="img/art-01.png" alt="portada de noticia" ></div>
+                        </form>
+                    <div>
 
-                <div class="noticiaCuerpo">
-                    <p>Desde hace un tiempo es común ver vídeos en redes sociales en los que una persona realiza una videollamada con extraños en la plataforma Omegle y ésta empieza a obtener información de dónde vive, cómo se llama, etc. dejando sorprendido al otro participante.</p>
-                    <p>En el siguiente vídeo podemos encontrar cómo el youtuber Charles Clayton obtiene mediante una pequeña automatización la geolocalización de las direcciones IP de aquellos emparejados con él en las videollamadas de Omegle.</p>
-                    <p>Hay multitud de clips y recopilaciones en las plataformas YouTube y TikTok, aunque algunas son sospechosamente falsas; la pregunta que nos hacemos es: ¿cómo lo hacen?</p>
-                    <p>Las personas que sufren esta revelación de datos personales se preguntan si han sido hackeados, la respuesta a esto sería que no, al menos en principio, simplemente han compartido su IP pública a través del servicio de Omegle y el resto se basa en utilizar diferentes herramientas para recolectar la mayor información posible.</p>    
-                    <br>                 
+                        <br>
 
-                </div>
-                <div class="noticiaVolverContenedor">
-                    <a class="noticiaFuente" href="https://unaaldia.hispasec.com/2022/10/una-videollamada-con-extranos-puede-exponer-tus-datos.html" target="_blank">Link a la fuente</a>
-                    <a class="noticiaFuente" href="index.html">Link a la página principal</a>
-                </div>
 
-                
+
+
+                </form>
+
+
 
             </div>
+
 
         </main>
 
         <aside class="sidebar">
             <h1>SIDEBAR</h1>
-            <h1>Lorem ipsum, dolor sit amet consetetur adipisicing elit. Obcaecati quas ducimus perspiciatis asperiores praesentium repellat magni aspernatur blanditiis enim aliquid? Unde aspernatur praesentium nihil, exercitationem earum nostrum saepe soluta eveniet.</h1>
+            <h1>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Obcaecati quas ducimus perspiciatis asperiores praesentium repellat magni aspernatur blanditiis enim aliquid? Unde aspernatur praesentium nihil, exercitationem earum nostrum saepe soluta eveniet.</h1>
             <div class="contenedor-iframe">
-                <iframe class="responsive-iframe"
+                <iframe
                     src="https://www.youtube.com/embed/86YLFOog4GM"
                     title="🌎 Nasa Live Stream  - Earth From Space :  Live Views from the ISS" >Este enlace no es soportado por el navegador</iframe>
             </div>
@@ -126,7 +163,21 @@
 
 
     </div>
-
+    <!-- <script>
+        const form = document.querySelector('#form')
+        $form.addEventListener('submit', handleSubmit)
+        function handleSubmit(event){
+            event.preventDefault()
+            const form = new FormData(this)
+            fetch(this.action, {
+                method: this.method,
+                body: form,
+                headers: {
+                    'Accept': 'application/json'
+                }
+            })
+        }
+    </script> -->
 
 
 </body>
