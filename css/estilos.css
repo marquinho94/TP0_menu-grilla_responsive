@@ -618,7 +618,7 @@ a {
         border: 3px solid var(--menu-color);
         border-radius: 0.3em;
         position: absolute;
-        right: 0.5em;
+        right: 0.3em;
         top: 3.3em;
 
         /*z-index: 9999;*/
