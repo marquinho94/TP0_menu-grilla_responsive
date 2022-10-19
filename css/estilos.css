@@ -229,9 +229,6 @@ a {
      border-color: rgb(0, 0, 0);
      z-index: 1;
  
- 
-     
- 
      /* min-height: 200px; */
      align-items: stretch;
  
@@ -249,10 +246,7 @@ a {
 
 }
 
-
 .contenedor .contenido .articulo .titular{
-
-
     /* background-color: var(--titular-bg-color); */
 
     margin: 24px auto;
@@ -267,11 +261,14 @@ a {
     flex-flow: column nowrap;
     justify-items: center;
     align-items: center;
-   
-
 
     /* grid-area: titular; */
 }
+
+.contenedor .contenido .articulo .titular > h3{
+    margin: 8px auto;
+}
+
 .contenedor .contenido .articulo .titular .seguirLeyendo{
 
     display: inline-block;
@@ -284,13 +281,10 @@ a {
 
     padding: 10px 20px;
     border-radius: 32px;
-
-
 }
 
 
 .contenedor .contenido .articulo .portada{
-
     /* background-color: #dcffd3; */
 
     display: flex;
@@ -298,20 +292,10 @@ a {
     margin: 8px 8px;
     /* margin: 32px; */
     /* padding: 8px; */
-    
-    
-    
-
-    
-
-
     /* grid-area: portada; */
-
-    
 }
 
 .contenedor .contenido .articulo .portada .portadaImagen {
-
     /* display: flex; */
 
     aspect-ratio: 1/1;
@@ -320,12 +304,9 @@ a {
     /* width: 200px; */
     object-fit:cover;
 
-
     max-width: 260px;
     max-height: 260px;
     border-radius: 32px;
-    
-   
 
     z-index: 0;
 }
@@ -344,8 +325,8 @@ a {
     border-color: rgb(0, 0, 0);
     z-index: 1;
     
-
     margin: 12px 24px;
+    padding: 8px; /*By CSB */
     display: flex;
     flex-flow: column nowrap;
     align-items: stretch;
@@ -354,21 +335,20 @@ a {
 
 }
 
-
 .contenedor .contenido .noticia .titular{
 
-
    /* background-color: var(--titular-bg-color); */
-
-   margin: 24px auto;
+   margin: 16px auto;
 
    text-align: left;
 
    font-size: 2rem;
    color: var(--titular-color);
-
 }
 
+.contenedor .contenido .noticia .titular > h1{
+    margin-bottom: 8px;
+}
 
 .contenedor .contenido .noticia .noticiaFotoContenedor{
 
@@ -378,7 +358,7 @@ a {
    align-items: center;
    justify-self: stretch;
    overflow: hidden;
-   margin: 8px 8px;
+   /* margin: 8px 8px; */
    /* margin: 32px; */
    /* padding: 8px; */
 }
@@ -394,13 +374,17 @@ a {
 .contenedor .contenido .noticia .noticiaCuerpo{
 
     margin: 24px auto;
-
-    text-align: left;
+    /* text-align: left; */
+    text-align: justify;
  
     font-size: 2rem;
     color: var(--titular-color);
-
 }
+
+.contenedor .contenido .noticia .noticiaCuerpo > p{
+    margin: 8px 16px;
+}
+
 .contenedor .contenido .noticia .noticiaVolverContenedor{
 
     display: flex;
