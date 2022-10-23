@@ -580,6 +580,13 @@ a {
         cursor: pointer;
       }
 
+      .api{
+
+        text-align: center;
+        font-size: 20px;
+        color: black;
+    }
+
 /* 
 *********************************************************************************************************
 *******************PARA BARRA DE NAVEGACIÓN CON MENÚ HAMBURGUESA************************************¨
