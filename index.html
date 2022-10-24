@@ -12,10 +12,15 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Aboreto&family=Pacifico&family=Roboto:ital,wght@0,100;0,400;0,500;0,700;1,100&display=swap"
         rel="stylesheet">
+    <link rel="icon" href="img/red-en-la-nube.ico">
+
 
 
 
     <title>TP0 Inicial</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
 
 
     <link rel="stylesheet" href="css/estilos.css">
@@ -35,11 +40,11 @@
 
         <div class="navbar">
             <input type="checkbox" id="menu-check">
-                <label id="menu" for="menu-check">
-                    <span id="menu-abrir">&#9776;</span>
-                    <span id="menu-cerrar">X</span>
-                </label>
-            <nav> 
+            <label id="menu" for="menu-check">
+                <span id="menu-abrir">&#9776;</span>
+                <span id="menu-cerrar">X</span>
+            </label>
+            <nav>
                 <ul class="navbarList">
                     <li class="navbarListItems">
                         <a class=btn_1 href="index.html">Home</a>
@@ -53,7 +58,7 @@
                     <li class="navbarListItems"> 
                         <a class=btn_1 href="Computadoras">Computadoras</a>
                     </li> -->
-                    <li class="navbarListItems"> 
+                    <li class="navbarListItems">
                         <a class=btn_1 href="contacto.html">Contacto</a>
                     </li>
                     <li class="navbarListItems">
@@ -75,80 +80,118 @@
         <main class="contenido">
 
             <div class="articulo">
-                <div class="portada"><img class="portadaImagen" src="img/art-01.png" alt="portada de noticia" ></div>
+                <div class="portada"><img class="portadaImagen" src="img/art-01.png" alt="portada de noticia"></div>
                 <div class="titular">
                     <h1>Una videollamada con extraños puede exponer tus datos</h1>
-                    <h3>Una videollamada a traves de la plataforma Omegle podria reverlar datos personales sensibles.</h3>
+                    <h3>Una videollamada a traves de la plataforma Omegle podria reverlar datos personales sensibles.
+                    </h3>
                     <a href="articulo1.html" class="seguirLeyendo">Seguir Leyendo</a>
                 </div>
-                
 
-            </div>            
+
+            </div>
             <div class="articulo">
-                <div class="portada"><img class="portadaImagen" src="img/art-02.png" alt="portada de noticia" ></div>
+                <div class="portada"><img class="portadaImagen" src="img/art-02.png" alt="portada de noticia"></div>
                 <div class="titular">
-                    
+
                     <h1>Huawei nova 10 Pro review</h1>
                     <h3>Te contamos las caracteristicas mas relevantes del nuevo celular de Huawei.</h3>
                     <a href="articulo2.html" class="seguirLeyendo">Seguir Leyendo</a>
                 </div>
-                
+
 
             </div>
             <div class="articulo">
-                <div class="portada"><img class="portadaImagen" src="img/art-03.png" alt="portada de noticia" ></div>
+                <div class="portada"><img class="portadaImagen" src="img/art-03.png" alt="portada de noticia"></div>
                 <div class="titular">
-                    
+
                     <h1>Mercedes incluira en sus vehiculos el sistema de audio espacial de Apple</h1>
-                    <h3>Mercedes incorporara en sus vehiculos un sistema de audio de alta calidad de Apple, te invitamos a conocer un poco mas de sus caracteristicas.</h3>
+                    <h3>Mercedes incorporara en sus vehiculos un sistema de audio de alta calidad de Apple, te invitamos
+                        a conocer un poco mas de sus caracteristicas.</h3>
                     <a href="articulo3.html" class="seguirLeyendo">Seguir Leyendo</a>
                 </div>
-                
+
 
             </div>
             <div class="articulo">
-                <div class="portada"><img class="portadaImagen" src="img/art-04.png" alt="portada de noticia" ></div>
+                <div class="portada"><img class="portadaImagen" src="img/art-04.png" alt="portada de noticia"></div>
                 <div class="titular">
-                    
+
                     <h1>Marvel anuncia NFT en colaboración con Veve</h1>
-                    <h3>Marvel anuncia NFTs que los fans de todo el mundo podrán comprar en la tienda Veve Digital Collectibles.</h3>
+                    <h3>Marvel anuncia NFTs que los fans de todo el mundo podrán comprar en la tienda Veve Digital
+                        Collectibles.</h3>
                     <a href="articulo4.html" class="seguirLeyendo">Seguir Leyendo</a>
                 </div>
-                
+
 
             </div>
             <div class="articulo">
-                <div class="portada"><img class="portadaImagen" src="img/art-05.png" alt="portada de noticia" ></div>
+                <div class="portada"><img class="portadaImagen" src="img/art-05.png" alt="portada de noticia"></div>
                 <div class="titular">
-                    
+
                     <h1>DALLE-2 - Inteligencia artificial que crea imagenes de lo que le pidas.</h1>
-                    <h3>Esta inteligencia artificial creara imagenes basadas en un descripcion escrita de la imagen que deseas.</h3>
+                    <h3>Esta inteligencia artificial creara imagenes basadas en un descripcion escrita de la imagen que
+                        deseas.</h3>
                     <a href="articulo5.html" class="seguirLeyendo">Seguir Leyendo</a>
                 </div>
-                
+
 
             </div>
             <div class="articulo">
-                <div class="portada"><img class="portadaImagen" src="img/art-06.png" alt="portada de noticia" ></div>
+                <div class="portada"><img class="portadaImagen" src="img/art-06.png" alt="portada de noticia"></div>
                 <div class="titular">
-                    
+
                     <h1>La ESA avala la tecnología de Sateliot para conectar dispositivos 5G IoT con un satélite</h1>
-                    <h3>La Agencia Espacial Europea ha respaldado la tecnología impulsada por Sateliot y sus socios para conectar dispositivos del estándar IoT desde su futura constelación de satélites.</h3>
+                    <h3>La Agencia Espacial Europea ha respaldado la tecnología impulsada por Sateliot y sus socios para
+                        conectar dispositivos del estándar IoT desde su futura constelación de satélites.</h3>
                     <a href="articulo6.html" class="seguirLeyendo">Seguir Leyendo</a>
                 </div>
-                
+
 
             </div>
+
+            <div class="articulo">
+                <div class="portada"><iframe class="iframe" src="https://www.youtube.com/embed/86YLFOog4GM"
+                        title="🌎 Nasa Live Stream  - Earth From Space :  Live Views from the ISS">Este enlace no es
+                        soportado por el navegador</iframe></div>
+                <div class="titular">
+
+                    <h1>Aficionado al Espacio Exterior?</h1>
+                    <h3>Acá puedes seguir minuto a minuto el recorrido que realiza diariamente la Estación Espacial
+                        Internacional. Disfrútalo!.</h3>
+
+                </div>
 
         </main>
 
         <aside class="sidebar">
-            <h1>SIDEBAR</h1>
-            <h1>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Obcaecati quas ducimus perspiciatis asperiores praesentium repellat magni aspernatur blanditiis enim aliquid? Unde aspernatur praesentium nihil, exercitationem earum nostrum saepe soluta eveniet.</h1>
-            <div class="contenedor-iframe">
-                <iframe class="responsive-iframe"
-                    src="https://www.youtube.com/embed/86YLFOog4GM"
-                    title="🌎 Nasa Live Stream  - Earth From Space :  Live Views from the ISS" >Este enlace no es soportado por el navegador</iframe>
+            <div class="api" id="app">
+                <h1>Listado de Precio de Bitcoin</h1>
+                <P>Actualizado: {{time}}</P>
+
+                <section v-if="errored">
+                    <p>Lo sentimos, no es posible obtener la información en este momento, por favor intente nuevamente
+                        mas tarde</p>
+                </section>
+
+                <section v-else>
+                    <div v-if="loading">Cargando...</div>
+
+                    <div v-else v-for="currency in info" class="currency">
+                        {{ currency.description }}:
+                        <span>
+                            <span>{{ currency.rate_float | currencydecimal }}</span>
+                        </span>
+                    </div>
+
+                </section>
+            </div>
+            <div>
+                <h1>SIDEBAR</h1>
+                <h1>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Obcaecati quas ducimus perspiciatis
+                    asperiores
+                    praesentium repellat magni aspernatur blanditiis enim aliquid? Unde aspernatur praesentium nihil,
+                    exercitationem earum nostrum saepe soluta eveniet.</h1>
             </div>
         </aside>
 
@@ -159,13 +202,14 @@
                 <a href="https://instagram.com/" target="_blank"><i class="fab fa-instagram fa-2x"></i></a>
                 <a href="https://twitter.com/" target="_blank"><i class="fab fa-twitter-square fa-2x"></i></a>
                 <br>
+                <h1 class="footerTexto">Marcos Miranda / Carlos Blua / Miguel Marulanda -- TPO Comisión 22527</h1>
             </div>
         </footer>
 
 
     </div>
 
-
+    <script src="js/bitcoin.js"></script>
 
 </body>
 

@@ -12,10 +12,14 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Aboreto&family=Pacifico&family=Roboto:ital,wght@0,100;0,400;0,500;0,700;1,100&display=swap"
         rel="stylesheet">
+    <link rel="icon" href="img/red-en-la-nube.ico">
 
 
 
     <title>TP0 Inicial</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
 
 
     <link rel="stylesheet" href="css/estilos.css">
@@ -107,12 +111,33 @@
         </main>
 
         <aside class="sidebar">
-            <h1>SIDEBAR</h1>
-            <h1>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Obcaecati quas ducimus perspiciatis asperiores praesentium repellat magni aspernatur blanditiis enim aliquid? Unde aspernatur praesentium nihil, exercitationem earum nostrum saepe soluta eveniet.</h1>
-            <div class="contenedor-iframe">
-                <iframe class="responsive-iframe"
-                    src="https://www.youtube.com/embed/86YLFOog4GM"
-                    title="🌎 Nasa Live Stream  - Earth From Space :  Live Views from the ISS" >Este enlace no es soportado por el navegador</iframe>
+            <div class="api" id="app">
+                <h1>Listado de Precio de Bitcoin</h1>
+                <P>Actualizado: {{time}}</P>
+
+                <section v-if="errored">
+                    <p>Lo sentimos, no es posible obtener la información en este momento, por favor intente nuevamente
+                        mas tarde</p>
+                </section>
+
+                <section v-else>
+                    <div v-if="loading">Cargando...</div>
+
+                    <div v-else v-for="currency in info" class="currency">
+                        {{ currency.description }}:
+                        <span>
+                            <span>{{ currency.rate_float | currencydecimal }}</span>
+                        </span>
+                    </div>
+
+                </section>
+            </div>
+            <div>
+                <h1>SIDEBAR</h1>
+                <h1>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Obcaecati quas ducimus perspiciatis
+                    asperiores
+                    praesentium repellat magni aspernatur blanditiis enim aliquid? Unde aspernatur praesentium nihil,
+                    exercitationem earum nostrum saepe soluta eveniet.</h1>
             </div>
         </aside>
 
@@ -123,13 +148,14 @@
                 <a href="https://instagram.com/" target="_blank"><i class="fab fa-instagram fa-2x"></i></a>
                 <a href="https://twitter.com/" target="_blank"><i class="fab fa-twitter-square fa-2x"></i></a>
                 <br>
+                <h1 class="footerTexto">Marcos Miranda / Carlos Blua / Miguel Marulanda -- TPO Comisión 22527</h1>
             </div>
         </footer>
 
 
     </div>
 
-
+    <script src="js/bitcoin.js"></script>
 
 </body>
 
