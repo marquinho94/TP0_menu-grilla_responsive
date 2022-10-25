@@ -17,15 +17,17 @@
 
 
     <title>TP0 Inicial</title>
+
+    <!-- Esto es solamente para la Api de Bitcoin -->
     <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
-
+    <!-- Hasta acá -->
 
     <link rel="stylesheet" href="css/estilos.css">
     <link rel="stylesheet" href="css/normalize.css">
     <script src="https://kit.fontawesome.com/e547f827f8.js" crossorigin="anonymous"></script>
-    
+
 
 </head>
 
@@ -40,11 +42,11 @@
 
         <div class="navbar">
             <input type="checkbox" id="menu-check">
-                <label id="menu" for="menu-check">
-                    <span id="menu-abrir">&#9776;</span>
-                    <span id="menu-cerrar">X</span>
-                </label>
-            <nav> 
+            <label id="menu" for="menu-check">
+                <span id="menu-abrir">&#9776;</span>
+                <span id="menu-cerrar">X</span>
+            </label>
+            <nav>
                 <ul class="navbarList">
                     <li class="navbarListItems">
                         <a class=btn_1 href="index.html">Home</a>
@@ -58,7 +60,7 @@
                     <li class="navbarListItems"> 
                         <a class=btn_1 href="Computadoras">Computadoras</a>
                     </li> -->
-                    <li class="navbarListItems"> 
+                    <li class="navbarListItems">
                         <a class=btn_1 href="contacto.html">Contacto</a>
                     </li>
                     <li class="navbarListItems">
@@ -85,65 +87,55 @@
             </div>
             <div class="imagenFormulario">
                 <img src="img/Computación-1.jpg" alt="Mundo_Conectado">
+                
             </div>
+            
+            
             <div class="table contacto">
-                        <form action="https://formspree.io/f/xpznldek" method="POST">
-                            <label>
-                                <legend>Nombre:</legend>
-                                <br>
-                                <input type="name" name="nombre">
-                            </label>
-
-                            <br>
-                            <br>
-
-                            <label>
-                                <legend>Apellido:</legend>
-                                <br>
-                                <input type="apellido" name="apellido">
-                            </label>
-                            
-                            <br>
-                            <br>
-
-                            <label>
-                                <legend>Mail:</legend>
-                                <br>
-                                <input type="email" name="email">
-                            </label>
-
-                            <br>
-                            <br>
-
-                            <label>
-                                <legend>Mensaje:</legend>
-                                <br>
-                                <textarea name="message"></textarea>
-                            </label>
-
-                            <br>
-                            <br>
-
-                            <button class="boton" type="submit">Enviar</button>
-                            <button class="boton" type="reset">Borrar datos</button>
-
-
-                            <br>
-
-                        </form>
-                    <div>
-
+                <form action="https://formspree.io/f/xpznldek" method="POST">
+                    <label>
+                        <legend>Nombre:</legend>
                         <br>
+                        <input type="name" name="nombre" required>
+                    </label>
+
+                    <br>
+                    <br>
+
+                    <label>
+                        <legend>Apellido:</legend>
+                        <br>
+                        <input type="apellido" name="apellido">
+                    </label>
+
+                    <br>
+                    <br>
+
+                    <label>
+                        <legend>Mail:</legend>
+                        <br>
+                        <input type="email" name="email" required>
+                    </label>
+
+                    <br>
+                    <br>
+
+                    <label>
+                        <legend>Mensaje:</legend>
+                        <br>
+                        <textarea name="message"></textarea>
+                    </label>
+
+                    <br>
+                    <br>
+
+                    <button class="boton" type="submit">Enviar</button>
+                    <button class="boton" type="reset">Borrar datos</button>
 
 
-
-
-                </form>
-
-
-
-            </div>
-
+                    <br>
+    
+                </form>        
 
         </main>
 
@@ -179,16 +171,16 @@
         </aside>
 
         <footer class="footer">
-            <h1>Soy un footer</h1>
             <div>
                 <a href="https://facebook.com/" target="_blank"><i class="fab fa-facebook-square fa-2x"></i></a>
                 <a href="https://instagram.com/" target="_blank"><i class="fab fa-instagram fa-2x"></i></a>
                 <a href="https://twitter.com/" target="_blank"><i class="fab fa-twitter-square fa-2x"></i></a>
                 <br>
-                <h1 class="footerTexto">Marcos Miranda / Carlos Blua / Miguel Marulanda -- TPO Comisión 22527</h1>
+                <div>
+                    <h1 class="footerTexto">Marcos Miranda / Carlos Blua / Miguel Marulanda -- TPO Comisión 22527</h1>
+                </div>
             </div>
         </footer>
-
 
     </div>
     <!-- <script>
