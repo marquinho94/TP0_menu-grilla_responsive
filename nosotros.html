@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- GOOGLE FONTS  -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Aboreto&family=Pacifico&family=Roboto:ital,wght@0,100;0,400;0,500;0,700;1,100&display=swap"
+        rel="stylesheet">
+
+
+
+    <title>TP0 Inicial</title>
+
+    <!-- Esto es solamente para la Api de Bitcoin -->
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <!-- Hasta acá -->
+
+
+
+    <link rel="stylesheet" href="css/estilos.css">
+    <link rel="stylesheet" href="css/normalize.css">
+    <script src="https://kit.fontawesome.com/e547f827f8.js" crossorigin="anonymous"></script>
+
+</head>
+
+<body>
+    <div class="contenedor">
+        <header class="header">
+            <!-- <h1>logo?</h1> -->
+            <br>
+            <h1>TECHNEWS</h1>
+
+        </header>
+
+        <div class="navbar">
+            <input type="checkbox" id="menu-check">
+            <label id="menu" for="menu-check">
+                <span id="menu-abrir">&#9776;</span>
+                <span id="menu-cerrar">X</span>
+            </label>
+            <nav>
+                <ul class="navbarList">
+                    <li class="navbarListItems">
+                        <a class=btn_1 href="index.html">Home</a>
+                    </li>
+                    <li class="navbarListItems">
+                        <a class=btn_1 href="Novedades">Novedades</a>
+                    </li>
+                    <!-- <li class="navbarListItems">
+                        <a class=btn_1 href="Smartphones">Smartphones</a>
+                    </li>
+                    <li class="navbarListItems"> 
+                        <a class=btn_1 href="Computadoras">Computadoras</a>
+                    </li> -->
+                    <li class="navbarListItems">
+                        <a class=btn_1 href="contacto.html">Contacto</a>
+                    </li>
+                    <li class="navbarListItems">
+                        <a class=btn_1 href="nosotros.html">Nosotros</a>
+                    </li>
+                    <!-- <li class="navbarListItems">
+                        <a class=btn_1 href="Twitter">Twitter</a>
+                    </li>
+                    <li class="navbarListItems">
+                        <a class=btn_1 href="Facebook">Facebook</a>
+                    </li>
+                    <li class="navbarListItems">
+                        <a class=btn_1 href="Instagram">Instagram</a>
+                    </li> -->
+                </ul>
+            </nav>
+        </div>
+
+        <main class="contenido">
+
+            <div class="noticia">
+
+                <div class="titular">
+
+                    <h1>NOSOTROS</h1>
+
+                </div>
+
+
+
+                <div class="noticiaCuerpo">
+                    <h3>¿Quiénes somos?</h3>
+                    <p>Somos un grupo de alumnos del programa CODO A CODO en Full Stack y estamos haciendo nuestra
+                        primera página.</p>
+                    <br>
+                    <h3>¿Cuál es nuestro objetivo?</h3>
+                    <p>Hacer de público conocimiento los avances en tecnología, así como información importante de este
+                        mundo. Todo en un formato descontracturado.</p>
+                    <p class="italic">También queremos aprobar el tp0...</p>
+                    <br>
+                    <h3>¿Dónde encontrarnos?</h3>
+                    <br>
+
+                    <div class="noticiaFotoContenedor">
+                        <img class="noticiaFoto" src="img/meme oficina.png" alt="portada de noticia">
+                        <!-- <p>algunos</p> -->
+                    </div>
+                    <br>
+                    <p>De cualquier forma, a continuación un mapa para poder llegar al jardín botánico</p>
+                    <br>
+
+                    <div class="noticiaFotoContenedor">
+                        <iframe class="noticiaFoto"
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d52557.64656271502!2d-58.48320996875!3d-34.582588199999975!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bcb581fe35595f%3A0x801e76c3f778715e!2sJard%C3%ADn%20Bot%C3%A1nico%20Carlos%20Thays!5e0!3m2!1ses!2sar!4v1666794135948!5m2!1ses!2sar"
+                            width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy"
+                            referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    </div>
+
+
+
+
+                </div>
+                <div class="noticiaVolverContenedor">
+                    <a class="noticiaFuente" href="index.html">Link a la página principal</a>
+                </div>
+
+
+
+            </div>
+
+
+
+
+        </main>
+
+        <aside class="sidebar">
+            <div class="api" id="app">
+                <h1>Listado de Precio de Bitcoin</h1>
+                <P>Actualizado: {{time}}</P>
+
+                <section v-if="errored">
+                    <p>Lo sentimos, no es posible obtener la información en este momento, por favor intente nuevamente
+                        mas tarde</p>
+                </section>
+
+                <section v-else>
+                    <div v-if="loading">Cargando...</div>
+
+                    <div v-else v-for="currency in info" class="currency">
+                        {{ currency.description }}:
+                        <span>
+                            <span>{{ currency.rate_float | currencydecimal }}</span>
+                        </span>
+                    </div>
+
+                </section>
+            </div>
+            <div class="sidebarContenedor">
+                <div class="sidebarArticulo">
+                    <h2>¿Qué es y cómo funciona el bitcoin?</h2>
+                    <p>
+                        El bitcoin es una criptomoneda o moneda virtual. Es una unidad de pago autorregulada sin
+                        referencia física ni respaldo de un país, que preserva el anonimato de sus propietarios y cuyas
+                        transacciones se realizan a través de internet mediante códigos cifrados y confirmados de manera
+                        múltiple por los propios integrantes de la red (mediante la denominada tecnología 'blockchain',
+                        en la práctica un libro contable o registro compartido de la actividad). El conocimiento de un
+                        código te hace propietario de ese activo (criptomoneda). Es una moneda completamente digital.
+                        Uno de los aspectos más polémicos es el proceso de creación de bitcoins, lo que ha venido a
+                        denominarse minería. En la práctica, ha pasado a ser controlado por pocas manos, la mayoría
+                        grupos organizados afincados en Asia. Con el incremento del precio del bitcóin, la rentabilidad
+                        del proceso de minería solo es posible en zonas con costes energéticos bajos.</p>
+                </div>
+            </div>
+
+        </aside>
+
+        <footer class="footer">
+            <div>
+                <a href="https://facebook.com/" target="_blank"><i class="fab fa-facebook-square fa-2x"></i></a>
+                <a href="https://instagram.com/" target="_blank"><i class="fab fa-instagram fa-2x"></i></a>
+                <a href="https://twitter.com/" target="_blank"><i class="fab fa-twitter-square fa-2x"></i></a>
+                <br>
+                <div>
+                    <h1 class="footerTexto">Marco Miranda / Carlos Blua / Miguel Marulanda -- TPO Comisión 22527</h1>
+                </div>
+            </div>
+        </footer>
+
+
+    </div>
+
+    <script src="js/bitcoin.js"></script>
+
+    <script>
+        var form = document.getElementById("my-form");
+
+        async function handleSubmit(event) {
+            event.preventDefault();
+            var status = document.getElementById("my-form-status");
+            var data = new FormData(event.target);
+            fetch(event.target.action, {
+                method: form.method,
+                body: data,
+                headers: {
+                    'Accept': 'application/json'
+                }
+            }).then(response => {
+                if (response.ok) {
+                    status.innerHTML = "Gracias por contactarnos!";
+                    form.reset()
+                } else {
+                    response.json().then(data => {
+                        if (Object.hasOwn(data, 'errors')) {
+                            status.innerHTML = data["errors"].map(error => error["message"]).join(", ")
+                        } else {
+                            status.innerHTML = "Oops! Ocurrió un problema al enviar los datos"
+                        }
+                    })
+                }
+            }).catch(error => {
+                status.innerHTML = "Oops! Ocurrió un problema al enviar los datos"
+            });
+        }
+        form.addEventListener("submit", handleSubmit)
+    </script>
+
+
+</body>
+
+
+</html>
