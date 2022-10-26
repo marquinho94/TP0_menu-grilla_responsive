@@ -212,15 +212,15 @@ a {
     justify-content: space-evenly;
     align-items: stretch;
     /* los articulso deberian ocupar todo el ancho disponible */
-/* <<<<<<< Branch-Miguel
+/* <<<<<<< Branch-Miguel =======*/
     margin: 24px 24px;
     
     
-=======*/
-    margin: 0 24px;
+
+    /*margin: 0 24px;
     width: 98%;
 
-    border-radius: 32px;
+    border-radius: 32px;*/
 
 /* >>>>>>> main*/
     gap: 24px 24px;
