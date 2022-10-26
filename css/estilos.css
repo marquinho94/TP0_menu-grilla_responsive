@@ -213,7 +213,8 @@ a {
     align-items: stretch;
     /* los articulso deberian ocupar todo el ancho disponible */
     margin: 24px 24px;
-
+    
+    
     gap: 24px 24px;
 
     grid-area: contenido;
