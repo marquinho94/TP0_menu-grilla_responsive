@@ -92,38 +92,29 @@
             
             
             <div class="table contacto">
-                <form action="https://formspree.io/f/xpznldek" method="POST">
-                    <label>
-                        <legend>Nombre:</legend>
+                <form id="my-form" action="https://formspree.io/f/xpznldek" method="POST">
+                    <label for="nombre">
+                        <legend>Nombre y Apellido:</legend>
                         <br>
-                        <input type="name" name="nombre" required>
+                        <input id="name" type="text" name="name" required>
                     </label>
 
                     <br>
                     <br>
 
-                    <label>
-                        <legend>Apellido:</legend>
-                        <br>
-                        <input type="apellido" name="apellido">
-                    </label>
-
-                    <br>
-                    <br>
-
-                    <label>
+                    <label for="email">
                         <legend>Mail:</legend>
                         <br>
-                        <input type="email" name="email" required>
+                        <input name="email" type="text" id="email" required>
                     </label>
 
                     <br>
                     <br>
 
-                    <label>
+                    <label for="message">
                         <legend>Mensaje:</legend>
                         <br>
-                        <textarea name="message"></textarea>
+                        <textarea id="message" name="message" cols="30" rows="30"></textarea>
                     </label>
 
                     <br>
@@ -134,8 +125,9 @@
 
 
                     <br>
-    
-                </form>        
+                    <p id="my-form-status"></p>
+                </form>
+                        
 
         </main>
 
@@ -193,23 +185,40 @@
         </footer>
 
     </div>
-    <!-- <script>
-        const form = document.querySelector('#form')
-        $form.addEventListener('submit', handleSubmit)
-        function handleSubmit(event){
-            event.preventDefault()
-            const form = new FormData(this)
-            fetch(this.action, {
-                method: this.method,
-                body: form,
-                headers: {
-                    'Accept': 'application/json'
-                }
-            })
-        }
-    </script> -->
 
-    <script src="js/bitcoin.js"></script>
+    <script>
+        var form = document.getElementById("my-form");
+        
+        async function handleSubmit(event) {
+          event.preventDefault();
+          var status = document.getElementById("my-form-status");
+          var data = new FormData(event.target);
+          fetch(event.target.action, {
+            method: form.method,
+            body: data,
+            headers: {
+                'Accept': 'application/json'
+            }
+          }).then(response => {
+            if (response.ok) {
+              status.innerHTML = "Gracias por contactarnos!";
+              form.reset()
+            } else {
+              response.json().then(data => {
+                if (Object.hasOwn(data, 'errors')) {
+                  status.innerHTML = data["errors"].map(error => error["message"]).join(", ")
+                } else {
+                  status.innerHTML = "Oops! Ocurrió un problema al enviar los datos"
+                }
+              })
+            }
+          }).catch(error => {
+            status.innerHTML = "Oops! Ocurrió un problema al enviar los datos"
+          });
+        }
+        form.addEventListener("submit", handleSubmit)
+    </script>
+    
 </body>
 
 
