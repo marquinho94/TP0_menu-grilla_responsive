@@ -382,6 +382,7 @@ a {
 }
 
 .contenedor .contenido .noticia .noticiaFotoContenedor{
+    
 
    /* background-color: #dcffd3; */
    /* align-self: center; */
@@ -394,6 +395,8 @@ a {
 }
 
 .contenedor .contenido .noticia .noticiaFotoContenedor .noticiaFoto {
+
+   
     
    aspect-ratio: 1/1;
    object-fit:cover;
@@ -401,11 +404,38 @@ a {
    /* flex-shrink: 20; */
 
    flex: 1 1 auto;
-   /* max-width: 800px; */
+    
+   max-width: 800px;
    /* max-height: 800px; */
    border-radius: 32px;
 
 }
+.memeContenedor{
+
+    /* background-color: #dcffd3; */
+    /* align-self: center; */
+    justify-self: center;
+    overflow: hidden;
+    
+    
+    /* flex-shrink: 20; */
+ 
+    /* POR ALGUNA RAZON ALINEANDO LSO ITEMS AL CENTRO CON ALIGN ITEMS SE ROMPE TODO Y LA IMAGEN NO SE ACHICA NI SE CORTA AL ACHICAR LA PANTALLA ????¡?¡? */
+ 
+ }
+.meme {
+    /* !important; */
+    
+    aspect-ratio: 1/1;
+    object-fit:cover;
+    /* align-self: center; */
+    /* flex-shrink: 20; */
+    /* display: block; */
+    max-width: 400px;
+
+    border-radius: 32px;
+ 
+ }
 
 .contenedor .contenido .noticia .noticiaCuerpo{
 
